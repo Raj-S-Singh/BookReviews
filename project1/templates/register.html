@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Register</h1>
+        <form action="{{ url_for('signup') }}", method="POST">
+            <div class="form-row">
+              <div class="col-md-6 mb-6">
+                <label for="Name">Name</label>
+                <input type="text" class="form-control" id="Name" required>
+              </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+              </div>
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <label for="pass">Password</label>
+                <input type="password" class="form-control" id="pass" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="cpass">Confirm Password</label>
+                <input type="password" class="form-control" id="cpass" required>
+              </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-3 mb-3">
+                <label for="profession">Profession</label>
+                <input type="text" class="form-control" id="profession" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox"  id="invalidCheck2" required>
+                <label class="form-check-label" for="invalidCheck2">
+                  Agree to terms and conditions
+                </label>
+              </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Register</button>
+          </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Login</h1>
+        <form action="{{url_for('signin')}}" method="POST">
+            <div class="form-group">
+              <label for="Email">Email address</label>
+              <input type="email" class="form-control" id="Email" aria-describedby="emailHelp">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="Password">Password</label>
+              <input type="password" class="form-control" id="Pass">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="Check">
+              <label class="form-check-label" for="Check">Remember credentials</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+            <a class="btn btn-primary" href="/templates/register.html" role="button">Register</a>
+            
+    </div>
+{% endblock %}
