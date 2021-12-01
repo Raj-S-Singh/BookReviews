@@ -1,5 +1,5 @@
 # Book Reviews Website
-Project1 for CS50W course.
+Project from CS50W course.
 ## Objectives
 
     Become more comfortable with Python.
